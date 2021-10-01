@@ -1,0 +1,533 @@
+//// global styles
+@import "main";
+
+#header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    padding: 30px 0;
+
+
+    @media (max-width:1023px) {
+        text-align: center;
+    }
+}
+
+#content {
+    position: relative;
+}
+
+.sec_hero {
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(to top, #008dc4, #00aa71);
+    padding: 150px 0 200px;
+    color: $color-white;
+
+    p {
+        margin-bottom: 15px;
+    }
+
+    .bg {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top:0;
+        bottom: 0;
+        z-index: -1;
+
+        img {
+            position: absolute;
+            height: 100%; 
+            width: 100%;
+            object-fit: cover;
+            object-position: bottom;
+        }
+    }
+
+    .caption {
+        width: 780px;
+        max-width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 25px;
+        font-weight: 500;
+    }
+} 
+
+.sec_getsolar {
+    position: relative;
+    z-index: 2;
+    background: linear-gradient(to top, #ecf5fb, #ffffff);
+    padding: 60px 0;
+
+    h2 {
+        color: $color-secondary;
+    }
+
+    h5 {
+        font-weight: 600;
+        margin-bottom: 20px;
+        line-height: 1.8;
+    }
+    
+    .enter_zip {
+        background: $color-lblue;
+        padding: 28px 40px;
+    }
+
+    .getsolar_form {
+        border-radius: 6px;
+        box-shadow: 0 3px 36px 0 rgba(0, 0, 0, 0.16);
+        background-color: #ffffff;
+        width: 530px;
+        max-width: 100%;
+        padding: 40px 60px;
+        margin: -160px auto 0;
+
+        .input-group {
+            input {
+                border-radius: 3px !important;
+            }
+    
+            .button {
+                font-size: 14px;
+            }
+    
+            .input-group-button {
+                padding-left: 10px;
+            }
+        }
+    
+    }
+
+    .soloar_features {
+        margin: 0 auto;
+        padding: 0;
+        max-width: 600px;
+        text-align: center;
+
+        li {
+            list-style: none;
+            display: inline-block;
+            vertical-align: top;
+            width: calc(50% - 4px);
+        }
+
+        .icon_top {
+            width: 220px;
+            display: inline-block;
+        }
+    }
+
+    @media(max-width:1023px) {
+        .getsolar_form {
+            margin-bottom: 50px;
+        }
+    }
+    @media (max-width: 639px) {
+
+        .getsolar_form {
+            padding: 30px;
+        }
+
+        .soloar_features  {
+            li {
+                width: 100%;
+                display: block;
+            }
+        }
+
+    }
+}
+
+
+.sec_what {
+    position: relative;
+    padding: 110px 0;
+
+    h2 {
+        color: $color-primary;
+        margin-bottom: 30px;
+    }
+
+    .copy {
+        width: 480px;
+        max-width: 100%;
+        margin: 0 auto;
+        
+    }
+
+    .media {
+        padding-top: 90px;
+    }
+
+    .video_play {
+        display: block;
+        max-width: 600px;
+        margin: 0 auto;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .badge_list {
+        margin: 0 -25px;
+        padding:0;
+
+        li {
+            list-style: none;
+            display: inline-block;
+            padding: 0 20px;
+            max-width: calc(33% - 3px);
+        }
+    }
+    
+}
+
+.sec_how {
+    position: relative;
+    z-index: 10;
+    background: url(../img/bg-how-it-works.jpg) no-repeat center top / cover;
+
+    .float {
+        position: absolute;
+        font-weight: 600;
+        color: $color-primary;
+        margin: 40px 0 0 240px;
+    }
+
+    .timeline {
+        position: relative;
+        width: 1170px;
+        max-width: 100%;
+        margin: 0 auto;
+
+        &:before {
+            content: "";
+            border-left: 6px solid $color-primary;
+            position: absolute;
+            top:0;bottom: -50px;
+            left: 50%;
+            margin-left: -3px;
+        }
+
+        .item {
+            position: relative;
+            width: calc(50% - 40px);
+            background: $color-white;
+            border-radius: 5px;
+            box-shadow: 0 3px 36px 0 rgba(0, 0, 0, 0.16);
+            padding: 35px;
+            min-height: 205px;
+            display: flex;
+            align-items: center;
+            clear: both;
+
+            &:before {
+                content: attr(data-item);
+                position: absolute;
+                width: 38px;
+                height: 38px;
+                border-radius: 50%;
+                background: $color-secondary;
+                color: $color-white;
+                text-align: center;
+                line-height: 38px;
+                z-index: 1;
+                right: -60px;
+                top:30px;
+                font-size: 20px;
+                font-weight: bold;
+            }
+            
+            &:after {
+                content: "";
+                border-top:10px solid transparent;
+                border-bottom:10px solid transparent;
+                border-left:20px solid $color-white;
+                border-right:0;
+                position: absolute;
+                right: -20px;
+                top: 40px;
+            }
+ 
+            &:nth-of-type(odd) {
+                margin-left: auto;
+
+                &:before {
+                    left: -60px;
+                }
+
+                &:after {
+                    border-left:0;
+                    border-right:20px solid $color-white;
+                    left: -20px;
+                    right: auto;
+                }
+
+                &:first-child {
+                    float: right;
+                    margin-top: -50px;
+                }
+
+                &:last-child {
+                    float: right;
+                }
+            }
+
+            *:last-child {
+                margin-bottom: 0;
+                float: left;
+            }
+
+            h3 {
+                color: $color-primary;
+            }
+
+        }
+
+        .icon_left {
+            .icon {
+                top: 50%;
+                transform: translate(0, -50%);
+            }
+        }
+    }
+    .timeclear {
+        clear: both;
+        margin-bottom: 250px;
+    }
+
+    .join_solar {
+        background: rgba($color-primary, 0.78);
+        color: $color-white;
+        padding: 68px 0;
+
+        h2 {
+            text-align: center;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+
+        .overlap {
+            margin: -250px -20px -120px 0;
+            text-align: right;
+        }
+    }
+
+
+    @media (max-width: 1440px) {
+        .float {
+            margin-left: 130px;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        .float {
+            margin-left: 30px;
+        }
+    }
+
+    @media (max-width: 1023px) {
+        background: $color-lblue;
+        padding: 60px 0 0;
+
+        .float {
+            position: relative;
+            margin: 0 0 30px;
+        }
+
+        .timeline {
+            position: relative;
+
+            &:before {
+                left: 20px;
+                bottom: 0;
+            }
+
+            .item {
+                float: none !important;
+                margin: 0 0 30px 60px !important;
+                width: calc(100% - 80px);
+
+                &:before {
+                    right: auto !important;
+                    left: -60px;
+                }
+
+                &:after {
+                    left: -20px;
+                    right: auto !important;
+                    border-left:0;
+                    border-right:20px solid $color-white;
+                }
+
+                &:last-child {
+                    margin-bottom: 0 !important;
+                }
+            }
+        }
+
+        .timeclear {
+            margin-bottom: 50px;
+        }
+
+        .join_solar  {
+            padding:30px 0;
+
+            .overlap {
+                margin: 0;
+                text-align: center;
+
+                img {
+                    width: 500px;
+                }
+            }
+        }
+    }
+    
+    @media (max-width: 480px) {
+
+    }
+}
+
+
+.sec_catch {
+    position: relative;
+    background: #ecf5fb;
+    padding: 0;
+
+    h2 {
+        color: $color-primary;
+        font-weight: 600;
+    }
+
+    .copy {
+        strong {
+            color: $color-primary;
+        }
+    }
+
+    @media (max-width: 1023px) {
+        padding: 50px 0 0;
+        .copy {
+            text-align: center;
+        }
+
+        .media {
+            text-align: center;
+
+            img {
+                width: 640px;
+            }
+        }
+    }
+}
+
+.sec_start {
+    position: relative;
+    background-image: linear-gradient(to bottom, #008dc4, #00aa71);
+    padding: 50px 0;
+
+    h2 {
+        font-weight: 600;
+        color: $color-white;
+        margin-bottom: 30px;
+    }
+    
+    .badge_list {
+        margin: 0 -25px;
+        padding:0;
+
+        li {
+            list-style: none;
+            display: inline-block;
+            padding: 0 20px;
+            max-width: calc(33% - 3px);
+        }
+    }
+    
+    .enter_zip {
+        background: $color-lblue;
+        padding: 28px 40px;
+    }
+
+    .getsolar_form {
+        border-radius: 6px;
+        box-shadow: 0 3px 36px 0 rgba(0, 0, 0, 0.16);
+        background-color: #ffffff;
+        width: 530px;
+        max-width: 100%;
+        padding: 40px 60px;
+        margin: -70px auto;
+
+        .input-group {
+            input {
+                border-radius: 3px !important;
+            }
+    
+            .button {
+                font-size: 14px;
+            }
+    
+            .input-group-button {
+                padding-left: 10px;
+            }
+        }
+    }
+
+    @media (max-width: 1023px) {
+        text-align: center;
+
+        .getsolar_form {
+            margin: 30px auto 0;
+        }
+    }
+    @media (max-width: 639px) {
+
+        .getsolar_form {
+            padding: 30px;
+        }
+
+    }
+}
+
+
+#footer {
+    position: relative;
+    padding: 50px 0;
+
+    h3 {
+        font-size: 30px;
+        color: $color-grey;
+    }
+
+    .copyright {
+        color: $color-dblue;
+        font-size: 16px;
+    }
+    .copyright a {
+        color: $color-dblue;
+    }
+
+    .designby {
+        display: inline-block;
+    }
+
+    @media(max-width:1023px) {
+        text-align: center;
+
+        .flogo {
+            margin-bottom: 30px;
+
+           img {
+               width: 220px;
+           }
+        }
+    }
+}
+

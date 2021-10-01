@@ -1,0 +1,115 @@
+<?php
+/**
+ * Template Name: Lander - PPC 1 TY
+**/
+
+if (isset($_POST['billing_submit'])) { ?>
+
+    <?php
+    include_once (get_stylesheet_directory().'email-template.php');
+                                    
+} else {
+
+    wp_redirect(site_url() . '/pc-lander-1');
+
+}
+
+?>
+<!doctype html>
+<html> 
+<head>
+    <meta charset="<?php bloginfo( 'charset' ); ?>">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+
+    <?php 
+        remove_action( 'wp_head', 'wp_enqueue_scripts', 1); 
+        //remove_action( 'wp_head', 'style_scripts');
+
+        function hook_css_js () {
+
+            define('MBN_DIR_URI', get_template_directory_uri());
+            define('LANDER_ASSETS_URI', MBN_DIR_URI.'/lander/resources');
+            $version = "6.5.7"; 
+    ?>
+
+    <!--  CSS -->
+    <link rel="stylesheet" type="text/css" href="<?= LANDER_ASSETS_URI; ?>/css/app.css?ver=<?= $version; ?>" />
+	
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- JS -->
+    <script src="<?= LANDER_ASSETS_URI; ?>/vendor/jquery-3.4.1.min.js?ver=<?= $version; ?>"></script>
+    <script src="<?= LANDER_ASSETS_URI; ?>/vendor/foundation/js/foundation.min.js?ver=<?= $version; ?>"></script>
+
+    <?php 
+        } add_action('wp_head', 'hook_css_js'); 
+
+        wp_head();
+    ?>
+    <script async="" type="text/javascript">var d=document,s="https://a.smtrk.net/trk?t=s&i=6087255d2ea69b1e288faa0c&p=t,i,x&s=479302880387c74bc42b9596ef22eadd&r="+escape(d.referrer)+"&u="+escape(d.URL),n=d.reateElement("script"),e=d.getElementsByTagName("script")[0];n.async=!0,n.src=s,e.parentNode.insertBefore(n,e);</script>
+
+</head>
+<body>
+<header id="header">
+    <div class="grid-container">
+        <div class="grid-x">
+            <div class="cell xlarge-offset-1">
+                <a class="logo" href="/"><img src="<?= LANDER_ASSETS_URI; ?>/img/logo-w.png" alt="" class="skip-lazy"></a>
+            </div>
+        </div>
+    </div>        
+</header>
+<main id="content">
+    <section class="sec_hero">
+        <figure class="bg"><img src="<?= LANDER_ASSETS_URI; ?>/img/bg-banner.jpg" alt="" class="skip-lazy"></figure>
+        <div class="grid-container">
+            <div class="caption">
+                <h1>Go Solar. Without solar panels. </h1>
+                <p>Access the benefits and savings of solar today.</p>
+                <p>You save money every month.  Guaranteed.<br>And you don’t need roof panels.  Or even a roof.  We call it Community Solar.</p>
+                <p>Plus, for a limited time get one month free!</p>
+                <a href="#" class="button">learn more</a>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="sec_thankyou" style="padding: 100px 0;">
+        <div class="grid-container">
+            
+        <h1 style="text-align: center;">Thank You!</h1>
+        <p style="text-align: center;">Thank you for contacting us, we will get back to you as soon as we can.</p></p>
+        
+        </div>
+    </section>
+    
+</main>
+<footer id="footer" class="footer">
+    <div class="grid-container"> 
+        <div class="grid-x">
+            <div class="cell large-4 large-offset-1">
+                <figure class="flogo">
+                    <img src="<?= LANDER_ASSETS_URI; ?>/img/logo.png" alt="" class="skip-lazy" >
+                </figure>
+            </div>
+            <div class="cell large-7 text-center">
+                <h3>Call us:  1 - 833 - 227 - 2660</h3>
+                <div class="copyright">
+                    &copy; Source Power Company  |   All Rights Reserved.   |  
+                    <a href="#">Terms of Service</a> | 
+                    <a href="#">Privacy Policy</a>  |  
+                    <span class="designby"><a href="https://www.mybizniche.com/phoenix-web-design/" target="_blank">Website Design</a> by: My Biz Niche</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script>$(document).foundation();</script>
+<?PHP 
+	//remove_action( 'wp_footer', 'js_scripts');
+	wp_footer();
+?>
+</body>
+</html>
+

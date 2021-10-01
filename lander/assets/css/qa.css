@@ -1,0 +1,65 @@
+/*QA fixes Changes*/
+.input-group select {border-radius: 5px!important; margin:0; padding: 5px 30px 5px 5px !important;}
+.input-group .button {padding: 12px 25px !important;border-radius: 5px!important;}
+.input-group #f-providers {position: absolute; bottom: -25px;}
+
+
+.getsolar_form h5 {font-weight: 600;margin-bottom: 20px;line-height: 1.8;}
+.getsolar_form h3 { font-size: 32px;color: #00aa71;}
+.sec_hero {padding-bottom: 30px;}
+
+.sec_hero .enter_zip {background: #ecf5fb;padding: 28px 40px;}
+.sec_hero .getsolar_form {border-radius: 6px;-webkit-box-shadow: 0 3px 36px 0 rgba(0, 0, 0, 0.16);box-shadow: 0 3px 36px 0 rgba(0, 0, 0, 0.16);background-color: #ffffff;color: #545454;width: 530px;max-width: 100%;padding: 40px 60px 20px;margin: 30px auto 0;text-align: left;font-size: 16px;}
+.sec_hero .getsolar_form h2 {color: #00aa71;font-size: 32px;}
+
+.sec_hero .getsolar_form .input-group input {border-radius: 3px !important;}
+
+.sec_hero .getsolar_form .input-group .button {font-size: 14px;}
+
+.sec_hero .getsolar_form .input-group .input-group-button { padding-left: 10px; }
+.sec_hero  .input-group select {border-radius: 5px!important; margin:0; padding: 5px 30px 5px 5px !important;}
+.sec_hero  .input-group .button {padding: 12px 25px !important;border-radius: 5px!important;}
+.sec_hero  .input-group #f-providers {position: absolute; bottom: -25px;}
+
+#content {z-index:1}
+.sec_what {padding-top:70px;}
+.sec_what .media {display: block;}
+.sec_catch .copy {padding-top: 20px; padding-bottom: 20px;}
+
+.sec_getsolar .soloar_features {max-width:none;}
+.sec_getsolar .soloar_features li {width: calc(25% - 4px);}
+
+.getsolar_form #fsModal {margin-bottom: 0 !important}
+
+.sec_catch .media {display: block;}
+.sec_how .join_solar {padding:40px 0;}
+
+#fsModal select {width: 100%}
+
+#footer {background:#ecf5fb;}
+
+@media (max-width: 1280px) {
+    .sec_hero .getsolar_form {padding: 30px;}
+
+    .sec_catch h2 {font-size: 40px;}
+    .sec_how h2 {font-size: 38px;}
+    .sec_start .getsolar_form {padding: 30px;}
+
+    .sec_getsolar .getsolar_form {padding:30px;}
+    .sec_getsolar h5 { font-weight: 600; margin-bottom: 20px; line-height: 1.8;}
+}
+
+@media (max-width: 1023px) {
+    .sec_getsolar .soloar_features li {width: calc(50% - 4px);}
+}
+
+@media (max-width: 480px) {
+    #electric_utility_type .input-group {flex-flow: wrap !important;}
+    #electric_utility_type select {width: 100%; margin-bottom: 10px;}
+    #electric_utility_type .input-group-button {padding-left: 0;width: 100%;}
+    #electric_utility_type .button {width: 100%}
+
+    .sec_getsolar .soloar_features li {width: 100%;}
+
+    #footer h3 {font-size: 24px}
+}

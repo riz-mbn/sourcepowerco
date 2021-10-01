@@ -11,7 +11,7 @@ body{
     font-family: $body-font-family;
     font-size: $body-font-size;
     color: $color-grey;
-    // font-weight: 300;
+    font-weight: 300;
     overflow-x: hidden;
 }
 
@@ -27,9 +27,9 @@ a {
 }
 
 h1, h2, h3, h4, h5, h6{
-    font-weight: bold;
+    font-weight: 700;
     font-family: $heading-font-family;
-    line-height:1.4;
+    line-height: 1.2;
     margin-bottom: 15px;
 }
 h4, h5, h6{
@@ -37,17 +37,17 @@ h4, h5, h6{
 }
 
 h1{
-    font-size: 47px;
+    font-size: 64px;
     line-height: 1;
 }
 h2{
-    font-size: 35px;
+    font-size: 40px;
 }
 h3{
     font-size:24px;
 }
 h4{
-    font-size:18px;
+    font-size:20px;
 }
 h5{
     font-size:16px;

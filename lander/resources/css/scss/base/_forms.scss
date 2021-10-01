@@ -1,0 +1,54 @@
+input[type=text], input[type=number],
+input[type=email], input[type=tel],
+input[type=password], select, textarea{
+    border: solid 1px #dbf1ff;
+    background-color: $color-white;
+    color: $color-grey;
+    padding: 8px 15px;
+    font-size: 18px;
+    font-weight: 500;
+    height: 40px;
+    border-color: $color-light;
+    border-radius: 4px;
+}
+select {
+    padding-right: 30px;
+}
+
+ul.gform_fields  {
+    margin:0 0 20px;
+    
+    li {
+        list-style: none;
+
+        &.hidden_label {
+            > label {
+                display: none;
+            }
+        }
+    }
+
+    .hidden_sub_label {
+        display: none;
+    }
+
+    .field {
+        .ginput_container {
+            span {
+                display: block;
+                
+                + span {
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+
+    .gfield {
+        margin-bottom: 15px;
+
+        input, textarea, select {
+            margin-bottom: 0;
+        }
+    }
+}

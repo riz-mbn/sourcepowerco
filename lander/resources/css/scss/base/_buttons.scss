@@ -1,0 +1,152 @@
+
+/* Buttons */
+.button{
+    padding: 12px 25px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1;
+    margin-bottom: 20px;
+    transition:all 0.5s ease;
+    border-radius: 4px;
+    background: $color-white;
+    color: $color-primary;
+    min-width: 140px;
+    text-align: center;
+
+    &:hover, &:focus {
+        color: $color-secondary;
+        background: $color-white;
+    }
+
+    &.disabled, &[disable] {
+        opacity: 1 !important;
+        background: $color-white !important;
+        color: $color-light !important;
+        border:1px solid $color-light !important;
+
+        * {
+            color: $color-light !important;
+        }
+        [class*="circle"] {
+            background: $color-light !important;
+            color: $color-white !important;
+        }
+    }
+    
+    &.full, &.na {
+        pointer-events: none;
+    }    
+        
+    &.hollow {
+        background: none;
+        color: $color-primary;
+        border-color: $color-primary;
+
+        &:hover {
+            background: $color-primary;
+            border-color: $color-primary;
+            color: $color-white;
+
+            i.dark {
+                color: $color-white;
+            }
+        }
+    }
+
+    &.primary {
+        background: $color-primary;
+        color: $color-white;
+
+        &:hover, &:focus {
+            color: $color-white;
+            background: linear-gradient(to right, $color-secondary, $color-primary);
+        }
+        
+        &.hollow {
+            background: none;
+            color: $color-primary;
+            border-color: $color-primary;
+    
+            &:hover {
+                background: $color-primary;
+                border-color: $color-primary;
+                color: $color-white;
+
+                i.dark {
+                    color: $color-white;
+                }
+            }
+        }
+    }
+
+    
+    &.secondary {
+        background: linear-gradient(125deg, $color-secondary 24%, $color-primary 105%);
+        color: $color-white;
+
+        &:hover, &:focus {
+            color: $color-white;
+            background: linear-gradient(to right, $color-secondary, $color-primary);
+        }
+    }
+
+    
+    &.small {   
+        padding: 10px 20px;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 26px;
+    }
+
+    &.large {   
+        padding: 18px 40px;
+        font-size: 20px;
+    }
+
+    &.download {
+        i {
+            font-size: 16px;
+            color: $color-dark;
+        }
+
+        &:hover {
+            i {
+                color: $color-white;
+            }
+        }
+    }
+
+    &.nomin {
+        min-width: 1px;
+    }
+
+    small {
+        display: inline-block;
+        font-size: 13px;
+        line-height: 1;
+        vertical-align: middle;
+        text-align: left;
+
+        s {
+            text-decoration: none;
+            color: $color-dark; 
+        }
+    }
+
+    .buttons & {
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+
+    .action & {
+        margin-bottom: 0;
+    }
+
+    @include media(max-width, 480px) {
+        padding: 10px 20px;
+    }
+    
+} 
+
