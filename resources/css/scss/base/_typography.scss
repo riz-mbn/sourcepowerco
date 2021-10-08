@@ -79,7 +79,7 @@ h6{
 }
 @include media(max-width, 1023px){
     body{
-        font-size: $body-font-size * 0.9;
+        font-size: $body-font-size * 0.9 !important;
     }
 
 }
@@ -87,7 +87,7 @@ h6{
 
 @include media(max-width, 639px){
     body{
-        font-size: $body-font-size * 0.8;
+        font-size: $body-font-size * 0.8 !important;
     }
 
     h1{
@@ -112,9 +112,11 @@ img{
 p{
     line-height: 1.6;
     margin-bottom: 20px; 
+
     &.large {
         font-size: 20px;
     }
+
     &.small {
         font-size: 14px;
     }

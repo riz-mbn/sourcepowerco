@@ -9,7 +9,7 @@
     line-height: 28px;
     transition:all 0.5s ease;
     border-radius: 3px;
-    min-width: 240px;
+    min-width: 190px;
 
     &:hover {
         color: $color-white;
@@ -17,7 +17,7 @@
     }
 
 
-    &.disabled, &[disable] {
+    &.disabled, &[disable]  {
         opacity: 1 !important;
         background: $color-white !important;
         color: $color-light !important;
@@ -37,6 +37,7 @@
     }    
         
     &.hollow {
+        border-width: 2px;
         background: none;
         color: $color-primary;
         border-color: $color-primary;
@@ -51,6 +52,57 @@
             }
         }
     }
+    
+
+    &.green {
+        background: $color-green;
+        color: $color-white;
+
+        &.hollow {
+            background: none;
+            color: $color-white;
+            border-color: $color-green;
+    
+            &:hover {
+                background: $color-green;
+                border-color: $color-green;
+                color: $color-white;
+
+                i.dark {
+                    color: $color-white;
+                }
+            }
+        }
+    }
+
+    
+
+    &.secondary {
+        background: $color-secondary;
+        color: $color-white;
+
+        &:hover {
+            color: $color-white;
+            background: lighten($color-secondary, 10%);
+        }
+        
+        &.hollow {
+            background: none;
+            color: $color-secondary;
+            border-color: $color-secondary;
+    
+            &:hover {
+                background: $color-secondary;
+                border-color: $color-secondary;
+                color: $color-white;
+
+                i.dark {
+                    color: $color-white;
+                }
+            }
+        }
+    }
+
 
     &.primary {
         background: $color-primary;
@@ -443,12 +495,20 @@
 a.btn-link {
     font-size: 14px;
     font-weight: 400;
-    color: lighten($color-black, 7%);
+    color: #111;
     display: inline-block;
     vertical-align: middle;
+    text-decoration:  none;
     
     &:hover {
-        color: lighten($color-black, 20%);
+        text-decoration:  none;
+
+        span {
+            color: $color-primary;
+            &:after {
+                right: -15px;
+            }
+        }
 
         .icn-arrow-r {
             margin-left: 5px;
@@ -461,6 +521,20 @@ a.btn-link {
 
     &.light {
         color: $color-white;
+    }
+
+    span {
+        font-size: 14px;
+        font-weight: 400;
+        color: #111;
+
+        &:after {
+            content: url(../img/icon/icn-arrow-right-blue.svg);
+            position: relative;
+            right: -10px;
+            -webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+        }
     }
 }
 
@@ -479,3 +553,4 @@ a.btn-back {
         margin:-2px 5px;
     }
 }
+

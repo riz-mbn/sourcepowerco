@@ -1,4 +1,4 @@
-.home {
+.home_page {
     
 
     /* HERO STYLE 3 */
@@ -20,7 +20,8 @@
                 bottom: 0;
                 top: 0;
                 right: 0;
-                background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.58) 32%, $color-white);
+                background-image: linear-gradient(21.01deg, rgba(255, 255, 255, 0) 27.84%, $color-white 88.3%);
+                transform: matrix(-1, 0, 0, 1, 0, 0);
             }
             
             img {
@@ -33,18 +34,29 @@
         .hero-caption {
             padding: 150px 0 50px;
             position: relative;
-            color:$color-grey;
+            color: $color-dark;
             min-height: 500px;
-            h5 {
-                line-height: 1.4;
+
+            h1, h2 {
+                text-transform: uppercase;
             }
-            h6 {
-                font-weight: 400;
+
+            h1 {
+                font-size: 72px;
+                margin-bottom: 10px;
             }
+
+            h2 {
+                font-size: 36px;
+            }
+
             p {
+                font-family: $font-family-roboto;
                 font-weight: 300;
-                color:lighten($color-black, 7%);
+                font-size: 28px;
+                line-height: 38px;
             }
+
             figure {
                 margin-bottom: 30px;
             }
@@ -73,8 +85,20 @@
         @include media(max-width, 1280px) {
             .hero-caption {
                 font-size: 18px;
+
                 h1 {
                     font-size: 45px;
+                }
+                h2 {
+                    font-size: 30px;
+                }
+                p {
+                    font-size: 20px;
+                    line-height: 28px;
+                }
+
+                .grid-x {
+                    min-height: calc(100vh - 500px);
                 }
             }
 
@@ -89,9 +113,22 @@
 
         @include media(max-width, 1023px) {
             padding: 0;
+            min-height: 60vh;
 
             .hero-caption {
                 height: auto;
+                min-height: 300px;
+                padding: 100px 0 50px;
+            }
+
+            .hero-form {               
+                position: absolute;
+                width: 100%;
+                margin: 0 auto;
+                max-width: 100%;
+                left: 0;
+                right: 0;
+                padding: 0 20px;
             }
         }
         
@@ -113,6 +150,15 @@
         }
         
         @include media(max-width, 480px) {
+            .hero-caption {
+                h2 {
+                    font-size: 15px;
+                }
+                p{
+                    font-size: 14px;
+                    line-height: 22px;
+                }
+            }
             .hero-logos {
                 ul {
                     li {
@@ -122,5 +168,299 @@
             }
         }
     }
+
+    .home_cta {
+        padding: 120px 0;
+
+        .text-wrap {
+            margin-bottom: 28px;
+            
+            h1 {
+                color: $color-black;
+                line-height: 72px;
+            }
+            p {
+                font-size: 32px;
+                line-height: 40px;
+            }
+
+        }
+
+        
+        @include media(min-width, 1025px){            
+            padding: 80px 0;
+        }
+
+        @include media(max-width, 1023px){       
+            padding: 0;
+            height: 35vh;
+        }
+        
+        @media(max-width: 480px) and (min-width: 376px){  
+            
+            height: 22vh;
+        }
+        
+        @media(max-width: 375px){  
+            
+            height: 28vh;
+        }        
+
+    }
+
+    /** home form **/
+
+    .hero-form #fsModal {
+
+        .form-group {
+            margin-bottom: 0;
+        }
+
+        input {
+            width: 190px;
+            min-height: 54px;
+            padding: 16px 20px;
+            border-radius: 5px;
+            color: $color-grey;
+            font-weight: 300;
+        }
+
+        .button {
+            color: $color-white;
+            height: 54px;
+            font-size: 18px;
+            width: 182px;
+            padding: 16px 0;
+            line-height: 1;
+            border-radius: 5px;
+            font-weight: 700;
+        
+        }
+
+        select {
+            border-radius: 5px;
+            color: $color-grey;
+            font-weight: 300;
+            min-width: 248px;
+        }
+
+        .small {
+            &.text-success,
+            &.text-danger {
+                color: $color-white;
+            }
+        }
+
+        .modal-header {
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+            background: $color-green;
+            align-items: center !important;
+            justify-content: center;
+            border-bottom: 0;
+
+            h2 {                
+                margin-bottom: 0;
+                color: $color-white;
+                font-size: 22px;
+                display: flex;
+                align-items: center;
+
+                &:before {
+                    content: "";
+                    background-size: 21px 27px;
+                    width: 21px;
+                    height: 27px;
+                    background-repeat: no-repeat;
+                    background-image: url(../img/icon/icn-shield.svg);
+                    display: inline-block;
+                    margin-right: 10px;
+                    left: 32px;
+                    top: 85%;
+                }
+            }
+        }
+
+        .modal-content {  
+            background-color: transparent;
+        }
+        
+        .modal-body {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            padding: 0 !important;
+            align-items: flex-start;
+            margin: 0;
+
+            #electric_utility_type {
+                align-items: flex-start;
+    
+                select {
+                    &:disabled {
+                        opacity: 1;
+                    }
+                }
+
+                .button.secondary {
+                    background: $color-primary;
+                }
+            }
+
+            .p-2 {
+                padding: 0 .5rem !important;
+            }
+        }
+
+        @include media(min-width, 1025px){
+            #electric_utility_type {
+                justify-content: flex-start;
+
+            }
+            .p-2 {
+                margin-left: -0.5rem;
+            }
+        }
+
+        
+        @include media(max-width, 1024px) {
+
+            .modal-body {
+                
+                flex-direction: column;
+                #zip_code_container {
+                    margin-left: -5px;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    .p-2,
+                    input {
+                        width: 100% ;
+                    }
+    
+                }
+
+                #electric_utility_type {
+                    margin-left: -5px;
+                    justify-content: flex-start;
+                }
+
+                input,
+                select,
+                .button{
+                    margin-bottom: 5px;
+                }
+    
+            }
+
+
+        }
+        
+        @include media(max-width, 375px) {
+            #zip_code_container {
+                flex-direction: column !important;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+
+                .p-2 {                    
+                    width: 100% !important;
+                    margin-left: -5px;
+                    margin-right: -5px;
+
+                    &:first-child {
+                        padding: 0 !important;
+                    }
+                }
+            }
+        }
+
+        @media(max-width: 1023px) and (min-width: 376px){                
+
+            #zip_code_container {
+
+                .p-2 {
+                    width: 40% !important;
+                    
+                    &:first-child {
+                        padding: 0 5px !important;
+                        width: 60% !important;
+                    }
+                }
+            }
+        }
+
+        @include media(max-width, 1023px) {                
+
+            #zip_code_container {
+                flex-direction: row;
+                flex-wrap: nowrap;
+                margin-left: -5px ;
+                margin-right: -5px ;
+                display: flex;
+                width: 100%;
+
+                .p-2 {
+                    
+                    &:first-child {
+                        margin-left: -5px;
+                    }
+                }
+            }
+
+            #electric_utility_type {
+                width: 100% !important;
+                flex-direction: column !important;
+                align-items: center;
+
+                .p-2 {
+                    width: 100%;
+                }
+
+                .button.secondary {
+                    background: $color-secondary !important;
+                }
+            }
+            
+            input,
+            select {
+                width: 100%;
+                padding: 0 20px !important;
+            }
+
+            input,
+            select,
+            .button{
+                min-height: 40px;
+                border-radius: 6px;
+                font-size: 14px;
+                height: 40px;
+                margin-bottom: 5px;
+                min-width: auto;
+            }
+
+            .button {
+                line-height: 1;
+                padding: 12px 0;
+                width: 100%;
+            }
+            .modal-body {
+                flex-direction: column;
+                justify-content: center;
+                background: $color-primary;
+                padding: 20px 30px 40px!important;
+                border-bottom-right-radius: 10px;
+                border-bottom-left-radius: 10px;
+                
+                .p-2 {
+                    padding: 0 !important;
+                }
+            }
+        }
+    }
+        
+    
+    /** end of home form**/
+
+
 
 }

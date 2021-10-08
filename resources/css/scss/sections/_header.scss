@@ -2,10 +2,7 @@
 body {
     &.admin-bar {
 		.hsnav-s2 {
-			.navbar {
-				margin-top: 32px;
-
-			}
+			top: 32px !important;
 		}        
     }
 
@@ -13,20 +10,28 @@ body {
         
         &.admin-bar {
 			.hsnav-s2 {
-				.navbar {
-					margin-top: 46px;
-	
-				}
+				top: 46px !important;
 			}       
             
         }
     }
 }
 
+.home {
+	header {
+		position: absolute !important;
+		top: 0;
+		width: 100%;
+		margin: 0 auto;
+
+	}
+}
+
 /* Header Sticky Nav Style 2 */
 header {
-	position: relative;
 	z-index: 9999;
+	position: relative !important;
+	
 	
 	&.overlap {
 		position: absolute;
@@ -34,10 +39,39 @@ header {
 		right: 0;
 		z-index: 999;
 	}
+
+	&.show-menu {
+		.hsnav-s2 {
+			background: $color-dark !important;
+
+				
+			@include media (max-width, 1023px){
+
+				.navbar {
+
+
+					.navlogo {
+						
+						.logo-mob {
+							display: block;
+						}
+
+						.logo {
+							display: none;
+						}
+					}
+
+				}
+				
+			}
+		}
+	}
+
 	.hsnav-s2 {
 		padding: 0 30px;
 		background: $color-white;
 		max-width: none !important;
+		transition: all 0.3s ease;
 		
 		&.sticky {
 			position: absolute;
@@ -89,7 +123,10 @@ header {
 			justify-content: space-between;
 			align-items: center;
 
-			.logo, .navlogo {
+			.navlogo {
+				.logo-mob {
+					display: none;
+				}
 			}
 			
 			.navcall {	
@@ -177,7 +214,6 @@ header {
 				height: 50px; 
 				position: absolute;  
 				right: 20px; 
-				top: 14px; 
 				font-size: 0; 
 				cursor: pointer; 
 				display: block;
@@ -185,21 +221,21 @@ header {
 				&:before {
 					content: ""; 
 					position: absolute; 
-					border-top: 3px solid $color-primary; 
-					border-bottom: 3px solid $color-primary; 
+					border-top: 2px solid $color-black; 
+					border-bottom: 2px solid $color-black; 
 					left: 14px; 
 					top: 16px; 
-					width: 22px; 
-					height: 19px; 
+					width: 24px; 
+					height: 14px; 
 					transition: all 0.5s ease;
 				}
 				&:after {
 					content: ""; 
 					position: absolute; 
-					border-top: 3px solid $color-primary; 
+					border-top: 2px solid $color-black; 
 					left: 14px; 
-					top: 24px; 
-					width: 22px; 
+					top: 22px; 
+					width: 24px; 
 					transition: all 0.5s ease;
 				}
 				@at-root header.show-menu .hsnav-s2 .navicon {
@@ -210,12 +246,14 @@ header {
 						height: 3px; 
 						transform: rotate(-45deg); 
 						border-bottom: 0; 
+						border-color: $color-white; 
 					}
 					&:after {
-						width: 22px; 
+						width: 24px; 
 						left: 14px; 
 						top: 24px; 
 						transform: rotate(45deg);
+						border-color: $color-white; 
 					}
 				}
 
@@ -225,14 +263,20 @@ header {
 			@include media(max-width, 1023px) {
 				.mobmenu {
 					position: fixed;
-					top: -100vh;
-					height: calc(100vh - 120px);
-					left: 0;
-					right: 0;
-					background: $color-primary;
+					top: 86px;
+					height: 100vh;
+					width: 0;
+					right: -100%;
+					background: $color-dark;
 					transition:all 0.5s ease;
 					overflow: auto;
-					background: $color-white;
+					padding: 0 30px;
+					color: $color-white;
+
+					.contact_info {
+
+						margin-top: 55px;
+					}
 
 					ul {
 						display: block;
@@ -240,38 +284,63 @@ header {
 						padding:10px 0; 
 						width: 100%;
 
-						li {
+						li.nav-cta {
+							width: 100%;
+							padding: 20px 0;
+							background: $color-secondary;
+							text-align: center;
+							border-radius: 6px;
+							margin-bottom: 35px;
+
+							a {
+								color: $color-white;
+								text-transform: uppercase;
+								font-weight: 700;
+								padding:0;
+							}
+
+							&:hover {
+								background: $color-primary;
+							}
+						}
+
+						li:not(.nav-cta) {
 							text-align: left;
 							display: block;
 							margin: 0;
-							border-top: 1px solid lighten($color-black, 90%);
+
 
 							a {
 								font-size: 14px; 
 								line-height: 1.1; 
 								font-weight: bold; 
-								color:lighten($color-black, 44%); 
+								color: $color-white; 
 								text-transform: uppercase; 
-								padding:16px 35px; 
+								padding:16px 0; 
 								position: relative;
 
+									
 								&:before {
-									position: absolute; 
-									left: 25px; 
-									top:50%; 
-									margin-top:-22px; 
+									content: "";
+									background-size: 20px 10px;
+									width: 20px;
+									height: 10px;
+									background-repeat: no-repeat;
+									background-image: url(../img/icon/icn-arrow-right-blue.svg);
+									display: inline-block;
+									margin-right: 10px;
+									left: 32px;
+									top: 85%;
 								}
 							}
 							ul {
 								margin: 0;
 								padding: 0;
-								background:$color-white;
 								li {
 									a {
 										padding-left: 45px;
 										text-transform: none; 
-										text-align: left; 
-										color: lighten($color-black, 44%); 
+										text-align: left;  
 									}
 								}
 							}
@@ -279,13 +348,13 @@ header {
 					}
 
     				.submenu-toggle {
-    					background:lighten($color-black, 90%)  url(../img/icn-plus.svg) no-repeat 17px center / 15px; 
+    					background:lighten($color-black, 90%)  url(../img/icon/icn-plus.svg) no-repeat 17px center / 15px; 
     					width:55px; 
     					height: 47px; 
     					right: 0;
 
     					&[aria-expanded="true"] {
-    						background-image: url(../img/icn-close-r.svg); 
+    						background-image: url(../img/icon/icn-close-r.svg); 
     					}
     					&:after {
     						content: ""; border:0;
@@ -294,20 +363,59 @@ header {
 					
 					@at-root header.show-menu .hsnav-s2 .mobmenu {
 						display: block;
-						top:120px;
+						width: 100%;
+						right: 0;
 					}
 
 				}
 			}
 		}
 
+		@include media(max-width, 1600px) {
+			.navlogo {
+				width: 350px;
+			}
+			.navbar {
+				.navmenu {
+					a {
+						font-size: 18px;
+						padding: 18px 20px;
+					}
+				}
+			}
+		}
+		
+		@include media(max-width, 1440px) {
+			.navbar {
+				padding: 19px 0;
+			}
+		}
+
+		@include media(max-width, 1366px) {
+			.navlogo {
+				width: 250px;
+			}
+		}
 		
 		@include media(max-width, 1199px) {
 			.navbar {
 				.navmenu {
 					a {
-						font-size: 15px;
+						font-size: 14px;
 						padding: 18px 20px;
+					}
+				}
+			}
+		}
+
+		@include media (max-width, 1024px){
+			.navlogo {
+				width: 210px;
+			}
+			.navbar {
+				.navmenu {
+					a {
+						padding: 18px 10px;
 					}
 				}
 			}

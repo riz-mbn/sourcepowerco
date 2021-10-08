@@ -27,8 +27,12 @@
         </div> -->
         <div class="navbar">
             <a class="navlogo" href="<?php echo home_url(); ?>">
-                <figure>
+                <figure class="logo">
                     <img src="<?php echo MBN_ASSETS_URI ?>/img/logo.svg" alt="" width="373" height="80">
+                </figure>
+                
+                <figure class="logo-mob">
+                    <img src="<?php echo MBN_ASSETS_URI ?>/img/logo-mob.svg" alt="" width="373" height="80">
                 </figure>
             </a>
             <span class="navicon hide-for-large" data-toggle="header">mobile menu</span>
@@ -46,22 +50,66 @@
             </nav>
 
             <nav class="mobmenu hide-for-large">
-                <ul class="menu accordion-menu" data-multi-open="false" data-accordion-menu data-submenu-toggle="true">
-                    <li class="current-menu-item"><a href="#">Home</a></li>
-                    <li><a href="#">Gallery</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a>
-                        <ul>
-                            <li><a href="#">Services 1</a></li>
-                            <li><a href="#">Services 2</a></li>
-                            <li><a href="#">Services 3</a></li>
-                            <li><a href="#">Services 4</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                </ul>
+                <?php
+                    wp_nav_menu( array( 
+                        'theme_location' => 'mobile-menu',
+                        'menu'         => '',
+                        'container'    => 'ul',
+                        'items_wrap' => '<ul class="menu accordion-menu" data-multi-open="false" data-accordion-menu data-submenu-toggle="true">%3$s</ul>' ,
+                        'menu_class'   => 'menu accordion-menu',
+                    ));
+                ?> 
+                <div class="contact_info">                        
+                    <a class="mphone" href="tel:18332272660">                                
+                        <figure>
+                            <img src="<?php echo MBN_ASSETS_URI ?>/img/icon/icn-phone.svg" alt="" width="13" height="13"/>
+                        </figure>
+                        <span>1.833.227.2660</span>
+                    </a>
+                    <a class="tphone" href="tel:18332272660">                                
+                        <figure>
+                            <img src="<?php echo MBN_ASSETS_URI ?>/img/icon/icn-fax.svg" alt="" width="12" height="12"/>
+                        </figure>
+                        <span>1.833.227.2660</span>
+                    </a>
+                    <a class="email" href="mailto:customerservice@sourcepowerco.com">                               
+                        <figure>
+                            <img src="<?php echo MBN_ASSETS_URI ?>/img/icon/icn-email.svg" alt="" width="16" height="16"/>
+                        </figure>
+                        <span>customerservice@sourcepowerco.com</span>
+                    </a>
+                </div>
+                
+                <p>Follow Us</p>
+                <div class="social_icons">
+                    <a href="<?php echo esc_url('https://www.facebook.com/'); ?>">
+                        <figure>
+                            <img src="<?php echo MBN_ASSETS_URI ?>/img/icon/icn-fb.svg" alt="" width="9" height="17"/>
+                        </figure>
+                    </a>
+                    <a href="<?php echo esc_url('https://www.instagram.com//'); ?>">
+                        <figure>
+                            <img src="<?php echo MBN_ASSETS_URI ?>/img/icon/icn-ig.svg" alt="" width="17" height="17"/>
+                        </figure>
+                    </a>
+                    <a href="<?php echo esc_url('https://www.twitter.com//'); ?>">
+                        <figure>
+                            <img src="<?php echo MBN_ASSETS_URI ?>/img/icon/icn-tw.svg" alt="" width="18" height="12"/>
+                        </figure>
+                    </a>
+                    <a href="<?php echo esc_url('https://www.yoututbe.com//'); ?>">
+                        <figure>
+                            <img src="<?php echo MBN_ASSETS_URI ?>/img/icon/icn-yt.svg" alt="" width="17" height="17"/>
+                        </figure>
+                    </a>
+                    <a href="<?php echo esc_url('https://www.linkedin.com//'); ?>">
+                        <figure>
+                            <img src="<?php echo MBN_ASSETS_URI ?>/img/icon/icn-ln.svg" alt="">
+                        </figure>
+                    </a>
+                </div>
             </nav>
+            
         </div>
     </div>            
 </header>

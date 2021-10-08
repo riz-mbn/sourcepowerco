@@ -110,6 +110,7 @@
 		cursor: pointer;
 		opacity: 0.3;
 		border:0 !important;
+		z-index: 1;
 
 		position: absolute;
 		top:50%;
@@ -123,12 +124,12 @@
 		}
 	}
 	.slick-prev {
-		left:10px;
-		background: url(../img/icn-chev-left.svg) no-repeat center;
+		left:-30px;
+		background: url(../img/icon/icn-chev-left.svg) no-repeat center;
 	}
 	.slick-next {
-		right: 10px;
-		background: url(../img/icn-chev-right.svg) no-repeat center;
+		right: -30px;
+		background: url(../img/icon/icn-chev-right.svg) no-repeat center;
 	}
 }
 

@@ -42,6 +42,7 @@ function mbn_theme_setup(){
 
     register_nav_menus(array(
         'main-menu'   => 'Main Menu',
+        'mobile-menu'   => 'Mobile Menu',
     ));
 
 }
@@ -80,7 +81,6 @@ function mbn_enqueue_scripts(){
     wp_register_script( 'jquery-migrate', MBN_ASSETS_URI.'/vendor/jquery-migrate-3.min.js', [], $wp_version);
     wp_enqueue_script( 'jquery-migrate' );
     
-
     // Foundation JS
     wp_enqueue_script('foundation', MBN_ASSETS_URI.'/vendor/foundation/js/foundation.min.js', [], $wp_version);
 
@@ -97,7 +97,7 @@ function mbn_enqueue_scripts(){
 
     
     // App
-    wp_enqueue_style('app', MBN_ASSETS_URI.'/css/app.css', [], $wp_version);
+    wp_enqueue_style('app', MBN_ASSETS_URI.'/css/app.css', [],'1.1.7');
     wp_enqueue_script('app', MBN_ASSETS_URI.'/js/app.js', [], $wp_version, true);
     
 
