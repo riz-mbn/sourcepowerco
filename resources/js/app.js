@@ -76,8 +76,16 @@
 
               var $windowWidth = $(window).width();
 
+            //   $('.switch_btns .tab-title span').click(function(e){
+            //         e.preventDefault();
+            //         var target = this.hash;
+            //         console.log( tab_parent );
+            //   });
+
               if ($windowWidth <= 1023) {
-                  $('.switch_btns').slick({                        
+                  $('.switch_btns').slick({  
+                      draggable: false,    
+                      swipe: false,                     
                       dots: false,
                       arrow: false,
                       speed: 300,
@@ -87,9 +95,12 @@
                       prevArrow: false,
                       nextArrow: false,
                       asNavFor: '.diff_boxes',
+                      focusOnSelect: true
                   });
 
-                  $('.diff_boxes').slick({   
+                  $('.diff_boxes').slick({  
+                      centerMode: true,
+                      swipe: false,
                       draggable: false,                     
                       dots: false,
                       arrow: false,

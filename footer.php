@@ -12,23 +12,25 @@
                             </figure>
                         </a>
                     </div>
-                    <div class="cell small-12 medium-12 large-2 large-offset-1 col-item footer_col"> 
+                    <div class="cell small-6 medium-6 large-2 large-offset-1 col-item footer_col"> 
                         <div class="footer_menu">                
                             <ul class="menu">
                                 <li class="menu-item"><a href="<?php echo home_url() ?>">Home</a></li>
-                                <li class="menu-item"><a href="<?php echo home_url() ?>/#about">About Us</a></li>
-                                <li class="menu-item"><a href="<?php echo home_url() ?>/#faqs">FAQs</a></li>
+                                <li class="menu-item"><a href="<?php echo home_url() ?>/about">About Us</a></li>
+                                <li class="menu-item"><a href="<?php echo home_url() ?>/faqs">FAQs</a></li>
                                 <li class="menu-item"><a href="<?php echo home_url() ?>/contact">Contact</a></li>
+                                <li class="menu-item hide-for-large"><a href="<?php echo home_url() ?>/terms-of-service">Terms of Service</a></li>
+                                <li class="menu-item hide-for-large"><a href="<?php echo home_url() ?>/privacy-polic">Privacy Policy</a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="cell small-12 medium-12 large-3 col-item footer_col">  
+                    <div class="cell small-6 medium-6 large-3 col-item footer_col">  
                         <div class="footer_menu">                
                             <ul class="menu">
-                                <li class="menu-item"><a href="<?php echo home_url() ?>">What is Community Solar? </a></li>
-                                <li class="menu-item"><a href="<?php echo home_url() ?>/#services">How it works ?</a></li>
-                                <li class="menu-item"><a href="<?php echo home_url() ?>/#about">What’s the catch?</a></li>
-                                <li class="menu-item"><a href="<?php echo home_url() ?>/#faqs">Ready to save?</a></li>
+                                <li class="menu-item"><a href="<?php echo home_url() ?>/what-is-community-solar/">What is Community Solar? </a></li>
+                                <li class="menu-item"><a href="<?php echo home_url() ?>/how-it-works">How it works ?</a></li>
+                                <li class="menu-item"><a href="<?php echo home_url() ?>/whats-the-catch">What’s the catch?</a></li>
+                                <li class="menu-item"><a href="<?php echo home_url() ?>/ready-to-save">Ready to save?</a></li>
                             </ul>
                         </div>
                     </div>
@@ -87,7 +89,9 @@
             </div>
             <div class="footbot">
                 <div class="footer_copyright">
-                    &copy; <?php echo date('Y'); ?> Source Power Company<span class="separator"> | </span><a href="https://www.mybizniche.com/phoenix-web-design/" target="_blank">Website</a> by: My Biz Niche
+                    <p>&copy; <?php echo date('Y'); ?> Source Power Company</p>
+                    <span class="separator"> | </span>
+                    <p><a href="https://www.mybizniche.com/phoenix-web-design/" target="_blank">Website</a> by: My Biz Niche</p>
                 </div>
                 <div class="footer_links">
                     <a href="<?php echo home_url('/privacy-policy');?>">Terms of Service</a><span class="separator"> | </span>

@@ -31,7 +31,7 @@ get_header() ?>
 				<div class="cell large-6 small-12 even">
 					<div class="work_boxes">
 						<div class="work_box">
-							<figure><img src="<?php echo MBN_ASSETS_URI ?>/img/img-enroll-easy.svg" width="137" height="110" /></figure>
+							<figure><img src="<?php echo MBN_ASSETS_URI ?>/img/img-graph.svg" width="75" height="106" /></figure>
 							<div class="text-wrap">
 								<h3>Nothing changes for you.</h3>
 								<p>You will continue to use electricity and receive your regular monthly utility bill. The only difference you’ll notice is that Source Power Company will be listed as your “energy provider” and the bill will reflect your solar energy credits. In addition, there is <strong>no credit check or upfront</strong> cost to you of any kind.</p>
@@ -45,7 +45,7 @@ get_header() ?>
 				<div class="cell large-6 small-12 odd">
 					<div class="work_boxes">
 						<div class="work_box">
-							<figure><img src="<?php echo MBN_ASSETS_URI ?>/img/img-enroll-easy.svg" width="137" height="110" /></figure>
+							<figure><img src="<?php echo MBN_ASSETS_URI ?>/img/img-hand-energy.svg" width="112" height="103" /></figure>
 							<div class="text-wrap">
 								<h3>You’ll earn solar energy credits.</h3>
 								<p>When you’re subscribed to a solar farm, your solar energy credits will begin  right away. Every billing period, a portion of these credits will be applied to your electric bill automatically.  You will receive one invoice each month from Source Power. <strong>No multiple bills</strong> or complex credit bookkeeping, ever.</p>
@@ -61,7 +61,7 @@ get_header() ?>
 				<div class="cell large-6 small-12 even">
 					<div class="work_boxes">
 						<div class="work_box">
-							<figure><img src="<?php echo MBN_ASSETS_URI ?>/img/img-enroll-easy.svg" width="137" height="110" /></figure>
+							<figure><img src="<?php echo MBN_ASSETS_URI ?>/img/img-bottle-energy.svg" width="60" height="106" /></figure>
 							<div class="text-wrap">
 								<h3>You’ll start saving on Day One.</h3>
 								<p>As a residential or commercial customer, the <strong>renewable solar credit</strong> on your electric bills will provide guaranteed savings for you every month compared to the utility company. And the credits start on day one. Day one. There is <strong>no waiting list</strong>, and <strong>no waiting to receive credits</strong>, for any reason, with Source Power.</p>

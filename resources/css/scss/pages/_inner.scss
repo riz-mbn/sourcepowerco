@@ -87,7 +87,6 @@
     }
 }
 
-
 .how_process {
     padding: 90px 0 120px;
     background: $color-dark;
@@ -167,7 +166,10 @@
             }
         }
 
-    }            
+    }           
+    @media (max-width: 1023px) {
+        padding: 60px 0;
+    } 
     
     @media (max-width: 767px) {
             
@@ -574,11 +576,11 @@
             .testi_slick {
                         
                 .slick-prev {
-                    left: 45%;
+                    left: 45% !important
                 }
 
                 .slick-next {
-                    right: 45%;
+                    right: 45%!important
                 }
             }
         }
@@ -615,11 +617,11 @@
             .testi_slick {
                         
                 .slick-prev {
-                    left: 40%;
+                    left: 40%!important
                 }
 
                 .slick-next {
-                    right: 40%;
+                    right: 40%!important
                 }
             }
         }
@@ -650,15 +652,12 @@
         }
     }
 
-    .switch_btn_wrap {
-        margin-bottom: 40px;
-    }
-
     .switch_btns {
-        width: 440px;
+        width: 340px;
         margin: 0 auto;
+        margin-bottom: 40px;
 
-        .tab {
+        .tab-title {
             text-align: center;
             text-transform: uppercase;
             font-size: 16px;
@@ -667,73 +666,98 @@
             border-radius: 5px;
             padding: 10px 20px;
 
-            &.active{
+            &.slick-current{
                 background: $color-primary;
-                color: $color-white;
+
+                span {                        
+                    color: $color-white;
+                }
+            }
+
+            
+
+            &:not(.slick-current){
+                background: #E5E5E5;
+            }
+
+            &:first-child{
                 border-radius: 5px 0px 0px 5px;
             }
 
-            &:not(.active){
-                background: #E5E5E5;
+            &:last-child{
                 border-radius: 0px 5px 5px 0px;
             }
         }
 
     }
 
+    
     .diff_boxes {        
         display: flex;
         justify-content: center;
         align-items: center;
-    }
+        background: transparent;
+        border: 0;
 
-    .diff_box_1 {
-        background: #F0F9FD;
-        border: 1px solid #CFF0FF;
-        box-sizing: border-box;
-        box-shadow: 10px 10px 24px rgba(0, 0, 0, 0.05);
-        border-radius: 10px;
-        padding: 46px 32px;
-        height: 348px;
-        width: 450px;
-
-        figure {
-            margin-bottom: 28px;
+        .slick-track {
+            display: flex;
+            align-items: center;
         }
 
-        .checklist_wrap{ 
-            padding-left: 20px;
+        .content {
+            height: 100%;
+            max-width: 450px;
+            min-height: 348px;
+            width: auto;
         }
+
+        .diff_box_1 {
+            background: #F0F9FD;
+            border: 1px solid #CFF0FF;
+            box-sizing: border-box;
+            box-shadow: 10px 10px 24px rgba(0, 0, 0, 0.05);
+            border-radius: 10px;
+            padding: 46px 32px;
+    
+            figure {
+                margin-bottom: 28px;
+            }
+    
+            .checklist_wrap{ 
+                padding-left: 20px;
+            }
+        }
+    
+        .diff_box_2 {        
+            background: #F7F7F7;
+            border: 1px solid #F1F1F1;
+            box-sizing: border-box;
+            border-radius: 10px;
+            padding: 50px 32px 50px 70px;
+    
+            position: relative;
+            z-index: -1;
+            left: -30px;
+            
+            h3 {
+                color: $color-dark;
+                font-weight: 700;
+                font-size: 24px;
+            }
+        }
+    
     }
 
-    .diff_box_2 {        
-        background: #F7F7F7;
-        border: 1px solid #F1F1F1;
-        box-sizing: border-box;
-        border-radius: 10px;
-        padding: 50px 32px 50px 70px;
-        width: 450px;
-        height: 348px;
-
-        position: relative;
-        z-index: -1;
-        left: -30px;
-        
-        h3 {
-            color: $color-dark;
-            font-weight: 700;
-            font-size: 24px;
-        }
-    }
 
         
     
-    @media (max-width: 1023px) {            
+    @media (max-width: 767px) {            
 
         .diff_boxes {       
-            
-            .diff_box_2 {    
-                left: 0;
+                
+            .content {
+                max-width: 300px;
+                width: auto;
             }
         }
 
@@ -742,7 +766,8 @@
 
 .how_it_works {
     padding: 150px 0 78px;
-    background: $color-primary;
+    background: $color-primary url('../img/img-blue-bg.jpg');
+    background-size: cover;    
     
     h1 {
         color: $color-white;

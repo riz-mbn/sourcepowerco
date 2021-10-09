@@ -135,13 +135,14 @@ get_header() ?>
 			<div class="cell large-12">				
 				<figure class="bg"><img src="<?php echo MBN_ASSETS_URI ?>/img/img-clouds.png" width="1337" height="439" /></figure>
 				<div class="switch_btn_wrap hide-for-large"> 
-					<div class="switch_btns">
-						<div class="tab active">Source Power</div>
-						<div class="tab">Competition</div>
-					</div>
+					
 				</div>
+				<div class="switch_btns hide-for-large">
+						<div class="tab-title active"><span>Source Power</span></div>
+						<div class="tab-title"><span>Competition</span></div>
+					</div>
 				<div class="diff_boxes">
-					<div class="diff_box_1">
+					<div class="diff_box_1 content active">
 						<figure><img src="<?php echo MBN_ASSETS_URI ?>/img/logo.svg" alt="" width="281" height="65"></figure>
 						<div class="checklist_wrap">
 							<div class="item">Guarantees savings on both electric and community solar</div>
@@ -151,7 +152,7 @@ get_header() ?>
 							<div class="item">We OWN our own farms</div>
 						</div>
 					</div>
-					<div class="diff_box_2">
+					<div class="diff_box_2 content">
 						<h3>COMPETTION</h3>
 						<div class="avoidlist_wrap">
 							<div class="item">Offers community solar savings</div>
