@@ -996,3 +996,46 @@
     }
 
 }
+
+.the_catch {
+    padding: 150px 0 78px;
+    background: $color-primary url('../img/img-blue-bg.jpg');
+    background-size: cover;  
+
+    .catch_boxes {
+        display: flex;
+
+        .catch_box {
+            padding: 0 15px;
+            width: 33.33%;
+
+            .catch_item {
+                min-height: 380px;
+                height: 100%;
+                padding: 40px;
+                background: $color-white;
+                border: 1px solid $color-white;
+                box-sizing: border-box;
+                box-shadow: 0px 4px 40px rgba(163, 171, 188, 0.1);
+                border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+
+                figure{
+                    margin-bottom: 20px;
+                }
+
+                h3 {
+                    color: $color-dark;
+                }
+
+                .highlight,
+                strong {
+                    color: $color-primary;
+                }
+    
+            }  
+        }
+    }
+}
