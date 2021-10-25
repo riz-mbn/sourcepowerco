@@ -94,8 +94,8 @@
                     <p><a href="https://www.mybizniche.com/phoenix-web-design/" target="_blank">Website</a> by: My Biz Niche</p>
                 </div>
                 <div class="footer_links">
-                    <a href="<?php echo home_url('/privacy-policy');?>">Terms of Service</a><span class="separator"> | </span>
-                    <a href="<?php echo home_url('/terms-of-use');?>">Privacy Policy</a></div>
+                    <a href="<?php echo home_url('/terms-of-service');?>">Terms of Service</a><span class="separator"> | </span>
+                    <a href="<?php echo home_url('/privacy-policy');?>">Privacy Policy</a></div>
                 </div>
             </div>
         </div>

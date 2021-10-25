@@ -5,6 +5,21 @@
     font-weight: 700;
 }
 
+.content {
+    min-height: 40vh;
+}
+
+.page-content,
+.sec-404,
+.sec-thankyou {
+    margin-bottom: 50px;
+    margin-top: 50px;
+
+        
+    h1, h2, h3, h4, h5, h6{
+        color: $color-black;
+    }
+}
 
 .contact_info {
     display: flex;
